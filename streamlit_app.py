@@ -8,14 +8,14 @@ st.title("Simple Calculator")
 num1 = st.number_input("Enter the first number:",value=0.0)
 num2 = st.number_input("Enter the second number:",value=0.0)
 
-operation = st.selectbox("Select operation: ",["Addition","Substraction","Multiplication","Division"])
+operation = st.selectbox("Select operation: ",["Addition","Subtraction","Multiplication","Division"])
 
 if st.button("Calculate"):
     if operation =="Addition":
         result = num1+num2
-    elif operation == "Substraction":
+    elif operation == "Subtraction":
         result = num1-num2
-    elif operation == "Multipplication":
+    elif operation == "Multiplication":
         result = num1*num2
     elif operation == "Division":
         result = num1/num2
