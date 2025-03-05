@@ -11,7 +11,7 @@ energy= st.slider ("How Energitic do you fell? (0=Tired, 10=Full of Energy)",0,1
 if st.button("Get activity recommendation"):
     if mood >=7 and energy >=7:
         recommendation = "Go for a run or gym"
-    elif mood >=7 and energy = 7:
+    elif mood >=7 and energy >=7:
         recommendation = "Watch a comedy movie or listen to music"
     elif mood < 7 and energy >= 7:
         recommendation = "Try meditation"
