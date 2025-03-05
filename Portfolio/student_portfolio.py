@@ -5,7 +5,7 @@ st.set_page_config(page_title="Student Portfolio", page_icon="🎓",layout="wide
 
 #side navigation
 st.sidebar.title("📌 Navigation")
-page = st.siderbar.radio("Go to", ["Home","Projects","skills","customize profile","Contact"])
+page = st.sidebar.radio("Go to", ["Home","Projects","skills","customize profile","Contact"])
 
 #Home section
 if page == "Home":
