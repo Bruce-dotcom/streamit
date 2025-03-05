@@ -1,22 +1,20 @@
 import streamlit as st
 
 # Title
-st.title("Simple Calculator")
+st.title("Mood Based App")
 
 
 # Display message
-num1 = st.number_input("Enter the first number:",value=0.0)
-num2 = st.number_input("Enter the second number:",value=0.0)
+mood = st.slider ("How Happy are you? (0=sad, 10+very Happy)",0,10,5)
+energy= st.slider ("How Energitic do you fell? (0=Tired, 10=Full of Energy)",0,10,5)
 
-operation = st.selectbox("Select operation: ",["Addition","Subtraction","Multiplication","Division"])
-
-if st.button("Calculate"):
-    if operation =="Addition":
-        result = num1+num2
-    elif operation == "Subtraction":
-        result = num1-num2
-    elif operation == "Multiplication":
-        result = num1*num2
-    elif operation == "Division":
-        result = num1/num2
-    st.success(f"Result:{result}")
+if st.button("Get activity recommendation"):
+    if mood >=7 and energy >=7:
+        recommendation = "Go for a run or gym"
+    elif mood >=7 and energy = 7:
+        recommendation = "Watch a comedy movie or listen to music"
+    elif mood < 7 and energy >= 7:
+        recommendation = "Try meditation"
+    else:
+        recommendation = "Get your hands dirty with program"
+    st.success(f"Recommended activity: {recommendation}")
