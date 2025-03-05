@@ -16,7 +16,7 @@ if page == "Home":
     if uploaded_image:
         st.image(uploaded_image, width=150, caption="Profile Picture")
     else:
-        st.image("person.jpg", width=150, caption="Default Profile Picture")
+        st.image("Portfolio/person.jpg", width=150, caption="Default Profile Picture")
 
     # Student details
     name = st.text_input("Your Name", "ISHIMWE Bruce")
@@ -28,3 +28,12 @@ if page == "Home":
     st.write(f"📍 {location}")
     st.write(f"📚 {field_of_study}")
     st.write(f"🏫 {university}")
+
+#Download resume
+with open("Portfolio/CV-BRUCE ISHIMWE.pdf","rb") as file:
+    resume_bytes = file.read()
+st.download_button(label="📄, Download Resume", data=resume_bytes, file_name="CV-BRUCE ISHIMWE.pdf",mime="application/pdf")
+
+st.markdown("-------------")
+st.subheader("About Me")
+about_me == st.text_area("I am an AI Look forward!")
