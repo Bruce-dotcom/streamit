@@ -95,9 +95,9 @@ elif page =="Contact":
 		if submitted:
 			st.success("✅ Message sent successfully")
 
-		st.write("📧 Email: mclement@ines.ac.rw")
+		st.write("📧 Email: ishimwebruce30@gmail.com")
 		st.write("[🔗LinkedIn](https://ikigugugroup.rw)")
 		st.write("[📂GitHub](https://ikigugugroup.rw)")
 
 	st.sidebar.write("---")
-	st.sidebar.write("🔹 Made with ❤ using My Watermelon")
+	st.sidebar.write("🔹 Made with ❤ using My Head 😁")
