@@ -36,4 +36,11 @@ st.download_button(label="📄, Download Resume", data=resume_bytes, file_name="
 
 st.markdown("-------------")
 st.subheader("About Me")
-about_me == st.text_area("I am an AI Look forward!")
+about_me == st.text_area("Write a short description about yourself:","I am a passionate AI Student")
+
+st.write(about_me)
+
+#Projects page
+elif page== "Projects":
+    st.title("💻 My Projects")
+
