@@ -16,7 +16,7 @@ if page == "Home":
     if uploaded_image:
         st.image(uploaded_image, width=150, caption="Profile Picture")
     else:
-        st.image("sample/person.jpg", width=150, caption="Default Profile")
+        st.image("sample/_DSC2192-Edited.jpg", width=150, caption="Default Profile")
 
     # Personal Details
     name = st.text_input("Full Name:", "Bruce ISHIMWE")
@@ -45,16 +45,16 @@ elif page == "Projects":
                             ["All", "Year 1", "Year 2", "Year 3", "Final Year", "Group Project", "Internship Project"])
 
     projects = [
-        {"title": "📊 Student Attendance System using Face Recognition", "type": "Individual",
-         "description": "Developed an automated attendance system using OpenCV and Python to recognize student faces and mark attendance.",
+        {"title": "📊 Bank System", "type": "Individual",
+         "description": "Banking system with UI in Python.",
          "link": "https://github.com"},
-        {"title": "🤖 AI Chatbot", "type": "Group",
-         "description": "Developed an AI chatbot using Python & NLP for customer service automation.",
+        {"title": "🦾 Record System", "type": "Group",
+         "description": "Developed a recording system storing students information.",
          "link": "https://github.com"},
         {"title": "🌐 Website Development", "type": "Class Assignment",
-         "description": "Built a dynamic website using Flask and React for e-commerce.", "link": "https://github.com"},
+         "description": "Built a dynamic website.", "link": "https://github.com"},
         {"title": "📕 Final Year Dissertation: AI-Powered Resume Matcher", "type": "Final Year Project",
-         "description": "Building an AI-powered system for matching resumes to job descriptions using Natural Language Processing (NLP).",
+         "description": "DESIGN AND IMPLEMENTATION OF MOBILE APPLICATION FOR TRACKING THE NEAREST FUEL GAS STATIONS",
          "link": "https://github.com"}
     ]
 
@@ -107,4 +107,4 @@ elif page == "Contact":
     st.write("[📂 GitHub](https://github.com)")
 
 st.sidebar.write("---")
-st.sidebar.write("🔹 Made with ❤ in Streamlit using my Head 😁")
+st.sidebar.write("🔹 Made with ❤ using my Head 😁")
