@@ -41,24 +41,25 @@ if page == "Home":
 # Projects Section
 elif page == "Projects":
     st.title("💻 My Projects")
-    category = st.selectbox("Filter by:",
-                            ["All", "Year 1", "Year 2", "Year 3", "Final Year", "Group Project", "Internship Project"])
+    category = st.selectbox("Filter by:", ["All", "Year 1 Project", "Group Projects", "Dissertation"])
 
     projects = [
-        {"title": "📊 Bank System", "type": "Individual",
+        {"title": "📊 Bank System", "type": "Year 1 Project",
          "description": "Banking system with UI in Python.",
-         "link": "https://github.com"},
-        {"title": "🦾 Record System", "type": "Group",
-         "description": "Developed a recording system storing students information.",
-         "link": "https://github.com"},
-        {"title": "🌐 Website Development", "type": "Class Assignment",
+         "link": "https://github.com/Bruce-dotcom/streamit/tree/main/sample/Individual"},
+        {"title": "🦾 Record System", "type": "Group Projects",
+         "description": "Developed a recording system storing students' information.",
+         "link": "https://github.com/Bruce-dotcom/streamit/tree/main/sample/Group2"},
+        {"title": "🌐 Website Development", "type": "Group Projects",
          "description": "Built a dynamic website.", "link": "https://github.com"},
-        {"title": "📕 Final Year Dissertation: AI-Powered Resume Matcher", "type": "Final Year Project",
+        {"title": "📕 Final Year Dissertation: AI-Powered Resume Matcher", "type": "Dissertation",
          "description": "DESIGN AND IMPLEMENTATION OF MOBILE APPLICATION FOR TRACKING THE NEAREST FUEL GAS STATIONS",
-         "link": "https://github.com"}
+         "link": "https://github.com/Bruce-dotcom/streamit/tree/main/sample/dissertation"}
     ]
 
-    for project in projects:
+    filtered_projects = [project for project in projects if category == "All" or project["type"] == category]
+
+    for project in filtered_projects:
         with st.expander(project["title"]):
             st.write(f"**Project Type:** {project['type']}")
             st.write(project["description"])
