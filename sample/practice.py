@@ -16,7 +16,7 @@ if page == "Home":
     if uploaded_image:
         st.image(uploaded_image, width=150, caption="Profile Picture")
     else:
-        st.image("person.jpg", width=150, caption="Default Profile")
+        st.image("sample/person.jpg", width=150, caption="Default Profile")
 
     # Personal Details
     name = st.text_input("Full Name:", "Your Name")
