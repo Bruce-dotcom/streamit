@@ -6,7 +6,7 @@ st.set_page_config(page_title="My Digital Footprint", page_icon="🎓", layout="
 
 # Sidebar Navigation
 st.sidebar.title("📌 Navigation")
-page = st.sidebar.radio("Go To:", ["Home", "Projects", "Skills & Achievements", "Customize Profile", "Contact"])
+page = st.sidebar.radio("Go To:", ["Home", "Projects", "Skills & Achievements", "Customize Profile","Testimonials", "Timeline", "Contact"])
 
 # Home Section
 if page == "Home":
@@ -90,7 +90,7 @@ elif page == "Customize Profile":
     st.text_input("Edit Name")
     st.text_area("Edit About Me")
     st.file_uploader("Upload New Profile Picture", type=["jpg", "png"])
-    
+
 # Testimonials Section
 elif page == "Testimonials":
     st.title("🗣️ Student Testimonials")
