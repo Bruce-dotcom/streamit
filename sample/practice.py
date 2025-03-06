@@ -90,23 +90,7 @@ elif page == "Customize Profile":
     st.text_input("Edit Name")
     st.text_area("Edit About Me")
     st.file_uploader("Upload New Profile Picture", type=["jpg", "png"])
-
-# Contact Section
-elif page == "Contact":
-    st.title("📬 Contact Me")
-    with st.form("contact_form"):
-        name = st.text_input("Your Name")
-        email = st.text_input("Your Email")
-        message = st.text_area("Your Message")
-        submitted = st.form_submit_button("Send Message")
-        if submitted:
-            with st.spinner("Sending..."):
-                time.sleep(2)
-                st.success("✅ Message sent successfully!")
-
-    st.write("📧 Email: ishimwebruce30@gmail.com")
-    st.write("[📂 GitHub](https://github.com)")
-
+    
 # Testimonials Section
 elif page == "Testimonials":
     st.title("🗣️ Student Testimonials")
@@ -131,6 +115,24 @@ elif page == "Timeline":
     ]
     for event in timeline:
         st.write(event)
+
+# Contact Section
+elif page == "Contact":
+    st.title("📬 Contact Me")
+    with st.form("contact_form"):
+        name = st.text_input("Your Name")
+        email = st.text_input("Your Email")
+        message = st.text_area("Your Message")
+        submitted = st.form_submit_button("Send Message")
+        if submitted:
+            with st.spinner("Sending..."):
+                time.sleep(2)
+                st.success("✅ Message sent successfully!")
+
+    st.write("📧 Email: ishimwebruce30@gmail.com")
+    st.write("[📂 GitHub](https://github.com)")
+
+
 
 st.sidebar.write("---")
 st.sidebar.write("🔹 Made with ❤ using my Head 😁")
