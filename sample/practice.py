@@ -41,21 +41,28 @@ if page == "Home":
 # Projects Section
 elif page == "Projects":
     st.title("💻 My Projects")
-    st.subheader("1️⃣ A project from Year 1, Year 2, Year 3 (Individual, Group Assignments, and Any Others)")
-    st.subheader("2️⃣ Your Current Dissertation/Final Year Project")
+    category = st.selectbox("Filter by:",
+                            ["All", "Year 1", "Year 2", "Year 3", "Final Year", "Group Project", "Internship Project"])
 
-    project_title = st.text_input("✔️ Project Title:", "E.g., Student Attendance System using Face Recognition")
-    project_type = st.selectbox("✔️ Project Type:", ["Individual", "Group", "Class Assignment", "Internship Project"])
-    project_description = st.text_area("✔️ Brief Description:", "Explain the problem, solution, and technologies used")
-    project_link = st.text_input("✔️ Link to Code (if available):", "GitHub repo or research documentation")
+    projects = [
+        {"title": "📊 Student Attendance System using Face Recognition", "type": "Individual",
+         "description": "Developed an automated attendance system using OpenCV and Python to recognize student faces and mark attendance.",
+         "link": "https://github.com"},
+        {"title": "🤖 AI Chatbot", "type": "Group",
+         "description": "Developed an AI chatbot using Python & NLP for customer service automation.",
+         "link": "https://github.com"},
+        {"title": "🌐 Website Development", "type": "Class Assignment",
+         "description": "Built a dynamic website using Flask and React for e-commerce.", "link": "https://github.com"},
+        {"title": "📕 Final Year Dissertation: AI-Powered Resume Matcher", "type": "Final Year Project",
+         "description": "Building an AI-powered system for matching resumes to job descriptions using Natural Language Processing (NLP).",
+         "link": "https://github.com"}
+    ]
 
-    if st.button("Save Project"):
-        st.success("Project details saved successfully!")
-        st.write(f"**Project Title:** {project_title}")
-        st.write(f"**Project Type:** {project_type}")
-        st.write(f"**Description:** {project_description}")
-        if project_link:
-            st.write(f"[🔗 Project Link]({project_link})")
+    for project in projects:
+        with st.expander(project["title"]):
+            st.write(f"**Project Type:** {project['type']}")
+            st.write(project["description"])
+            st.write(f"[🔗 GitHub]({project['link']})")
 
 # Skills & Achievements Section
 elif page == "Skills & Achievements":
