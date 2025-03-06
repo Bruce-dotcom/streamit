@@ -107,5 +107,30 @@ elif page == "Contact":
     st.write("📧 Email: ishimwebruce30@gmail.com")
     st.write("[📂 GitHub](https://github.com)")
 
+# Testimonials Section
+elif page == "Testimonials":
+    st.title("🗣️ Student Testimonials")
+    testimonials = [
+        "Bruce is a dedicated programmer who always delivers high-quality code. – Prof. Jane",
+        "Bruce is a passionate Student. - Mate. Prince"
+    ]
+    for testimonial in testimonials:
+        st.write(f"💬 {testimonial}")
+    new_testimonial = st.text_area("Leave a Testimonial")
+    if st.button("Submit Testimonial"):
+        st.success("✅ Testimonial submitted successfully!")
+
+# Timeline Section
+elif page == "Timeline":
+    st.title("⏳ Timeline of Academic & Project Milestones")
+    timeline = [
+        "✅ Year 1: First project completed",
+        "🏆 Year 2: Hackathon participation",
+        "💼 Year 3: Internship experience",
+        "📕 Year 4: Dissertation submission"
+    ]
+    for event in timeline:
+        st.write(event)
+
 st.sidebar.write("---")
 st.sidebar.write("🔹 Made with ❤ using my Head 😁")
